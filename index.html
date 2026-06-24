@@ -307,7 +307,7 @@
             -webkit-text-fill-color: #fff;
         }
 
-        /* --- CONTADOR --- */
+        /* --- CONSTADOR --- */
         .timer-box {
             margin: 25px 0;
             background: rgba(249, 115, 22, 0.1);
@@ -451,27 +451,20 @@
         ⚡ ATENCIÓN: Promoción de lanzamiento válida solo por tiempo limitado.
     </div>
 
-    <!-- HERO SECTION (Sempre visível) -->
+    <!-- HERO SECTION -->
     <header>
         <div class="container">
             <span class="pre-headline">¿Tu hijo vive en su propio mundo o se distrae fácilmente?</span>
             <h1>Activa su concentración profunda y su enfoque en solo 9 minutos al día</h1>
             
-                                    <div class="sub-headline">
+            <div class="sub-headline">
+                <!-- VSL / VÍDEO HOSPEDADO NO GITHUB COM ESPAÇO CORRIGIDO -->
                 <div style="max-width: 750px; margin: 25px auto 35px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.6); border: 2px solid #5a189a;">
                     <video width="100%" height="auto" controls poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800" style="display: block;">
-                        <source src="https://docs.google.com/uc?export=download&id=1uCJwe7tCv3Cbdyx2EMQ9PjAjcCihIu8Z " type="video/mp4"> 
+                        <source src="https://raw.githubusercontent.com/Fernandoangelo03/PG-de-Vendas/1a0f76b79bfd43cda2d91c620d5b2b9733aa5748/Criativo%2010.mp4" type="video/mp4"> 
                         Tu navegador no soporta la reproducción de videos.
                     </video>
                 </div>
-
-                <p style="margin-top: 20px;">Sin peleas diarias ni terapias costosas. Un método digital 100% científico que estabiliza su mente a través de frecuencias sensoriales mientras juega o incluso mientras duerme.</p>
-            </div>
-
-
-                <p style="margin-top: 20px;">Sin peleas diarias ni terapias costosas. Un método digital 100% científico que estabiliza su mente a través de frecuencias sensoriales mientras juega o incluso mientras duerme.</p>
-            </div>
-
 
                 <p style="margin-top: 20px;">Sin peleas diarias ni terapias costosas. Un método digital 100% científico que estabiliza su mente a través de frecuencias sensoriales mientras juega o incluso mientras duerme.</p>
             </div>
@@ -547,7 +540,7 @@
                 <div class="module-card bonus">
                     <span class="module-badge">Regalo Exclusivo</span>
                     <h4>Campo Minado</h4>
-                    <p>Guía práctica para padres sobre cómo estruturar el hogar libre de distracciones.</p>
+                    <p>Guía prática para padres sobre cómo estruturar el hogar libre de distracciones.</p>
                 </div>
             </div>
         </div>
@@ -616,22 +609,19 @@
 
     <!-- INTERATIVIDADE E CONTROLE DE DELAY COM JAVASCRIPT -->
     <script>
-        // CONFIGURAÇÃO DO DELAY RECALCULADA PARA 7 MINUTOS E 20 SEGUNDOS (440 SEGUNDOS)
-        const tempoSegundos = 440; 
+        // CONFIGURAÇÃO DO DELAY PARA APARECER EXATAMENTE COM 1 MINUTO E 5 SEGUNDOS (65 SEGUNDOS)
+        const tempoSegundos = 65; 
 
         setTimeout(function() {
-            // Revela o botão e o subtexto do topo
             const btnTopo = document.getElementById('btn-topo');
             const subtextTopo = document.getElementById('subtext-topo');
             if(btnTopo) btnTopo.classList.remove('oculto');
             if(subtextTopo) subtextTopo.classList.remove('oculto');
 
-            // Revela todas as seções informativas e de compra da página de uma só vez
             document.querySelectorAll('section.oculto').forEach(section => {
                 section.classList.remove('oculto');
             });
         }, tempoSegundos * 1000);
-
 
         // Script do Acordeon (FAQ)
         document.querySelectorAll('.faq-question').forEach(button => {
@@ -641,7 +631,7 @@
             });
         });
 
-        // Script do Cronômetro Regressivo Ajustado para 20 Minutos (Casando com o restante da VSL de 27min)
+        // Script do Cronômetro Regressivo Ajustado para 20 Minutos
         function startTimer(duration, display) {
             let timer = duration, minutes, seconds;
             setInterval(function () {
@@ -667,4 +657,3 @@
     </script>
 </body>
 </html>
-
