@@ -7,7 +7,7 @@
     <!-- Google Fonts para Design Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=400;600;700;800&family=Poppins:wght=300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         :root {
@@ -291,8 +291,9 @@
             font-size: 4rem;
             font-weight: 800;
             font-family: 'Montserrat', sans-serif;
-            color: #fff;
-            line-gradient: linear-gradient(to bottom, #fff, #9ca3af);
+            background: linear-gradient(to bottom, #fff, #9ca3af);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             margin-bottom: 25px;
             display: flex;
             align-items: center;
@@ -303,6 +304,7 @@
             font-size: 1.8rem;
             vertical-align: super;
             margin-right: 5px;
+            -webkit-text-fill-color: #fff;
         }
 
         /* --- CONTADOR --- */
@@ -419,6 +421,11 @@
             border-top: 1px solid rgba(255,255,255,0.02);
         }
 
+        /* --- CLASSE ESSENCIAL PARA O DELAY --- */
+        .oculto {
+            display: none !important;
+        }
+
         /* --- ANIMAÇÕES --- */
         @keyframes pulse {
             0% { transform: scale(1); }
@@ -444,29 +451,32 @@
         ⚡ ATENCIÓN: Promoción de lanzamiento válida solo por tiempo limitado.
     </div>
 
-    <!-- HERO SECTION -->
+    <!-- HERO SECTION (Sempre visível) -->
     <header>
         <div class="container">
             <span class="pre-headline">¿Tu hijo vive en su propio mundo o se distrae fácilmente?</span>
             <h1>Activa su concentración profunda y su enfoque en solo 9 minutos al día</h1>
-            <p class="sub-headline">
-<div style="max-width: 750px; margin: 25px auto 35px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.6); border: 2px solid #5a189a;">
-    <video width="100%" height="auto" controls poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800" style="display: block;">
-        <source src= "Criativo 01.mp4" type="video/mp4"> 
-        Tu navegador no soporta la reproducción de videos.
-    </video>
-</div>
-
-                Sin peleas diarias ni terapias costosas. Un método digital 100% científico que estabiliza su mente a través de frecuencias sensoriales mientras juega o incluso mientras duerme.
-            </p>
             
-            <a href="https://pay.kiwify.com/sh5Yg53" class="cta-button">¡Sí! Quiero activar el enfoque de mi hijo por $29</a>
-            <p class="cta-subtext">🛡️ Acceso Inmediato • Garantía Absoluta de 30 Días</p>
+            <div class="sub-headline">
+                <!-- VSL / VÍDEO CORRIGIDO -->
+                <div style="max-width: 750px; margin: 25px auto 35px auto; border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.6); border: 2px solid #5a189a;">
+                    <video width="100%" height="auto" controls poster="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800" style="display: block;">
+                        <source src="https://drive.google.com/file/d/1HbTinOsXRTOFCVRuYPjixv0pGRupN5o3/view?usp=drivesdk" type="video/mp4"> 
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+
+                <p style="margin-top: 20px;">Sin peleas diarias ni terapias costosas. Un método digital 100% científico que estabiliza su mente a través de frecuencias sensoriales mientras juega o incluso mientras duerme.</p>
+            </div>
+            
+            <!-- Botão do topo (Inicia Oculto) -->
+            <a href="https://pay.kiwify.com/sh5Yg53" class="cta-button oculto" id="btn-topo">¡Sí! Quiero activar el enfoque de mi hijo por $39</a>
+            <p class="cta-subtext oculto" id="subtext-topo">🛡️ Acceso Inmediato • Garantía Absoluta de 30 Días</p>
         </div>
     </header>
 
-    <!-- SEÇÃO DO PROBLEMA -->
-    <section class="problem-section">
+    <!-- SEÇÃO DO PROBLEMA (Inicia Oculta) -->
+    <section class="problem-section oculto">
         <div class="container">
             <h2 class="section-title">El Origen Oculto de la Falta de Atención</h2>
             <div class="grid-problem">
@@ -482,8 +492,8 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DA SOLUÇÃO -->
-    <section class="solution-section">
+    <!-- SEÇÃO DA SOLUÇÃO (Inicia Oculta) -->
+    <section class="solution-section oculto">
         <div class="container">
             <h2 class="section-title">Tecnología de Estabilización en 9 Minutos</h2>
             <p style="text-align: center; max-width: 700px; margin: 0 auto; color: var(--text-muted);">
@@ -505,8 +515,8 @@
         </div>
     </section>
 
-    <!-- CONTEÚDO POR DENTRO / MÓDULOS -->
-    <section class="inside-section">
+    <!-- CONTEÚDO POR DENTRO / MÓDULOS (Inicia Oculta) -->
+    <section class="inside-section oculto">
         <div class="container">
             <h2 class="section-title">El Ecosistema Completo "Cerebro Ninja"</h2>
             <p style="text-align: center; color: var(--text-muted);">Transformamos la estimulación cognitiva en una aventura interactiva que los niños adoran.</p>
@@ -518,45 +528,45 @@
                     <p>Audios de alta fidelidad con frecuencias diurna y nocturna reguladoras.</p>
                 </div>
                 <div class="module-card bonus">
-                    <span class="module-badge">Bono Regalo</span>
+                    <span class="module-badge">Regalo Exclusivo</span>
                     <h4>Misión Cerebro Ninja</h4>
                     <p>Ejercicios gamificados de lógica que entrenan su mente mientras él siente que juega.</p>
                 </div>
                 <div class="module-card bonus">
-                    <span class="module-badge">Bono Regalo</span>
+                    <span class="module-badge">Regalo Exclusivo</span>
                     <h4>Carácter de Hierro</h4>
                     <p>Herramientas de inteligencia emocional para gestionar la frustración y berrinches.</p>
                 </div>
                 <div class="module-card bonus">
-                    <span class="module-badge">Bono Regalo</span>
+                    <span class="module-badge">Regalo Exclusivo</span>
                     <h4>Campo Minado</h4>
-                    <p>Guía práctica para padres sobre cómo estructurar el hogar libre de distracciones.</p>
+                    <p>Guía práctica para padres sobre cómo estruturar el hogar libre de distracciones.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- PREÇO / OFERTA REGRESSIVA -->
-    <section id="comprar" class="offer-section">
+    <!-- PREÇO / OFERTA REGRESSIVA (Inicia Oculta) -->
+    <section id="comprar" class="offer-section oculto">
         <div class="container">
             <div class="pricing-box">
                 <p class="pre-headline" style="color: var(--warning)">Oferta Exclusiva de Lanzamiento</p>
                 <p class="old-price">Precio Regular: $497 USD</p>
-                <div class="new-price"><span>$</span>29<span style="font-size: 1.5rem; margin-left: 5px; vertical-align: middle;">USD</span></div>
+                <div class="new-price"><span>$</span>39<span style="font-size: 1.5rem; margin-left: 5px; vertical-align: middle;">USD</span></div>
                 
                 <div class="timer-box">
                     <span>⏳ La oferta expira en:</span>
-                    <span id="countdown">14:59</span>
+                    <span id="countdown">20:00</span>
                 </div>
 
-                <a href="https://pay.kiwify.com/sh5Yg53" class="cta-button" style="display: block; margin-top: 15px;">🎯 Adquirir el programa por $29</a>
+                <a href="https://pay.kiwify.com/sh5Yg53" class="cta-button" style="display: block; margin-top: 15px;">🎯 Adquirir el programa por $39</a>
                 <p class="cta-subtext" style="margin-top: 15px;">Pago 100% seguro y encriptado. Acceso instantáneo de por vida.</p>
             </div>
         </div>
     </section>
 
-    <!-- GARANTIA -->
-    <section class="warranty-section">
+    <!-- GARANTIA (Inicia Oculta) -->
+    <section class="warranty-section oculto">
         <div class="container">
             <div class="warranty-box">
                 <div class="warranty-badge">🛡️</div>
@@ -568,8 +578,8 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq-section">
+    <!-- FAQ (Inicia Oculta) -->
+    <section class="faq-section oculto">
         <div class="container">
             <h2 class="section-title">Preguntas Frecuentes</h2>
             <div class="faq-container">
@@ -583,7 +593,7 @@
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">¿El pago es mensual? <span class="faq-icon"></span></div>
-                    <div class="faq-answer">No. Es un único pago de $29 USD que te da acceso ilimitado y de por vida al programa y a todas sus futuras actualizaciones. No hay cargos ocultos.</div>
+                    <div class="faq-answer">No. Es un único pago de $39 USD que te da acceso ilimitado y de por vida al programa y a todas sus futuras actualizaciones. No hay cargos ocultos.</div>
                 </div>
             </div>
         </div>
@@ -597,9 +607,26 @@
         </div>
     </footer>
 
-    <!-- INTERATIVIDADE COM JAVASCRIPT -->
+    <!-- INTERATIVIDADE E CONTROLE DE DELAY COM JAVASCRIPT -->
     <script>
-        // 1. Script do Acordeon (FAQ)
+        // CONFIGURAÇÃO DO DELAY RECALCULADA PARA 7 MINUTOS E 20 SEGUNDOS (440 SEGUNDOS)
+        const tempoSegundos = 440; 
+
+        setTimeout(function() {
+            // Revela o botão e o subtexto do topo
+            const btnTopo = document.getElementById('btn-topo');
+            const subtextTopo = document.getElementById('subtext-topo');
+            if(btnTopo) btnTopo.classList.remove('oculto');
+            if(subtextTopo) subtextTopo.classList.remove('oculto');
+
+            // Revela todas as seções informativas e de compra da página de uma só vez
+            document.querySelectorAll('section.oculto').forEach(section => {
+                section.classList.remove('oculto');
+            });
+        }, tempoSegundos * 1000);
+
+
+        // Script do Acordeon (FAQ)
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
@@ -607,7 +634,7 @@
             });
         });
 
-        // 2. Script do Cronômetro Regressivo (15 minutos cíclicos para simular escassez)
+        // Script do Cronômetro Regressivo Ajustado para 20 Minutos (Casando com o restante da VSL de 27min)
         function startTimer(duration, display) {
             let timer = duration, minutes, seconds;
             setInterval(function () {
@@ -620,16 +647,16 @@
                 display.textContent = minutes + ":" + seconds;
 
                 if (--timer < 0) {
-                    timer = duration; // Reinicia para manter a página funcional
+                    timer = duration; 
                 }
             }, 1000);
         }
 
-        window.onload = function () {
-            let fifteenMinutes = 60 * 15,
+        window.addEventListener('load', function () {
+            let twentyMinutes = 60 * 20,
                 display = document.querySelector('#countdown');
-            startTimer(fifteenMinutes, display);
-        };
+            if(display) startTimer(twentyMinutes, display);
+        });
     </script>
 </body>
 </html>
